@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+}
+
+:root {
+    --sedan-orange: hsl(31, 77%, 52%);
+    --suvs-cyan: hsl(184, 100%, 22%);
+    --luxury-dark-cyan: hsl(179, 100%, 13%);
+    --paragraphs: hsla(0, 0%, 100%, 0.75);
+    --background-headings-buttons: hsl(0, 0%, 95%);
+}
+
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block: 3rem;
+}
+
+.card{
+    max-width: 230px;
+    padding: 2.5rem 3rem;
+    color: var(--background-headings-buttons);
+}
+
+.one{
+    background-color: var(--sedan-orange);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.two{
+    background-color: var(--suvs-cyan);
+}
+
+.three{
+    background-color: var(--luxury-dark-cyan);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.card h1{
+    margin-block: 1.5rem;
+    font-family: 'Big Shoulders Display';
+    text-transform: uppercase;
+}
+
+.card p{
+    color: var(--paragraphs);
+    font-family: 'Lexend Deca', sans-serif;
+    line-height: 1.5rem;
+    font-size: 15px;
+}
+
+.card button{
+    color: transparent;
+    background-color: var(--background-headings-buttons);
+    border-radius: 40px;
+    border: 0;
+    padding: 1rem 1.5rem;
+    margin-top: 2rem;
+    font-family: 'Lexend Deca', sans-serif;
+    border: 1px solid var(--background-headings-buttons);
+
+}
+
+.one button{
+    color: var(--sedan-orange);
+}
+
+.two button{
+    color: var(--suvs-cyan);
+}
+
+.three button{
+    color: var(--luxury-dark-cyan);
+}
+
+@media (min-width: 1040px){
+    .hero{
+        margin: 0;
+    }
+
+    .container{
+        display: flex;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card{
+        width: 210px;
+        border-radius: 0
+    }
+
+    .card p{
+        margin-bottom: 2.5rem;
+    }
+
+    .one{
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .three{
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .card button:hover{
+        background-color: transparent;
+        color: var(--background-headings-buttons);
+        cursor: pointer;
+        border: 1px solid var(--background-headings-buttons);
+    }
+}
